@@ -4,6 +4,16 @@
 
 @layer base {
   button {
-    @apply font-medium px-4 py-2 rounded-xl text-xs text-white;
+    @apply font-medium px-4 py-2 rounded-xl text-xs text-white transition duration-300;
+  }
+}
+
+@layer components {
+  .btn-hoverB {
+    @apply hover:bg-lightblue;
+  }
+
+  .btn-hoverR {
+    @apply hover:bg-lightred;
   }
 }

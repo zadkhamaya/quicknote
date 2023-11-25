@@ -37,24 +37,27 @@ export const NoteCard = ({ id, content }) => {
         <input
           value={currentContent}
           onChange={(e) => setCurrentContent(e.target.value)}
-          className=" text-xs p-2 focus:outline-none"
+          className=" bg-grey text-xs p-2 focus:outline-none"
         />
       ) : (
-        <div className=" text-xs h-24">{currentContent}</div>
+        <div className=" bg-grey text-xs h-24">{currentContent}</div>
       )}
 
       <div className="text-right space-x-2">
         {onEdit ? (
-          <button className="bg-blue" onClick={handleUpdate}>
+          <button className="bg-blue btn-hoverB" onClick={handleUpdate}>
             Update
           </button>
         ) : (
-          <button className="bg-blue" onClick={() => setOnEdit(true)}>
+          <button
+            className="bg-blue btn-hoverB"
+            onClick={() => setOnEdit(true)}
+          >
             Edit
           </button>
         )}
 
-        <button className=" bg-red" onClick={handleDelete}>
+        <button className=" bg-red btn-hoverR" onClick={handleDelete}>
           Delete
         </button>
       </div>

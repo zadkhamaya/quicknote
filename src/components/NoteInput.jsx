@@ -36,7 +36,7 @@ export const NoteInput = () => {
         />
 
         <button
-          className="text-xs bg-blue p-3 rounded-xl text-white font-medium w-1/4"
+          className="text-xs bg-blue btn-hoverB p-3 rounded-xl text-white font-medium w-1/4"
           onClick={createNote}
         >
           Save
