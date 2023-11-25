@@ -37,10 +37,10 @@ export const NoteCard = ({ id, content }) => {
         <input
           value={currentContent}
           onChange={(e) => setCurrentContent(e.target.value)}
-          className=" p-2 focus:outline-none"
+          className=" text-xs p-2 focus:outline-none"
         />
       ) : (
-        <div className=" h-24">{currentContent}</div>
+        <div className=" text-xs h-24">{currentContent}</div>
       )}
 
       <div className="text-right space-x-2">
