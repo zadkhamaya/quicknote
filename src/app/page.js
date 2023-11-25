@@ -1,3 +1,4 @@
+import { NoteCard } from "@/components/NoteCard";
 import { NoteInput } from "@/components/NoteInput";
 
 async function getNotes() {
@@ -18,7 +19,7 @@ export default async function Page() {
       <h1>Notes :</h1>
       <div>
         {items.map(({ id, content }) => {
-          return <div key={id}>{content} </div>;
+          return <NoteCard key={id} id={id} content={content} />;
         })}
       </div>
       <NoteInput />

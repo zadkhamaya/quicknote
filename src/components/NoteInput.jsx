@@ -23,7 +23,6 @@ export const NoteInput = () => {
       }
     );
     const data = await res.json();
-    console.log(data);
     router.refresh();
   }
 
