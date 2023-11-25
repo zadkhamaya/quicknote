@@ -32,31 +32,29 @@ export const NoteCard = ({ id, content }) => {
     router.refresh();
   }
   return (
-    <div className="flex gap-2 p-2 border-2 rounded-lg justify-between">
+    <div className="flex gap-2 p-3 m-6 rounded-xl flex-col justify-between bg-grey">
       {onEdit ? (
         <input
           value={currentContent}
           onChange={(e) => setCurrentContent(e.target.value)}
-          className="border-2 p-2"
+          className=" p-2 focus:outline-none"
         />
       ) : (
-        <div>{currentContent}</div>
+        <div className=" h-24">{currentContent}</div>
       )}
-      <div>
+
+      <div className="text-right space-x-2">
         {onEdit ? (
-          <button className="text-xs p-1 rounded-lg" onClick={handleUpdate}>
+          <button className="bg-blue" onClick={handleUpdate}>
             Update
           </button>
         ) : (
-          <button
-            className="text-xs p-1 rounded-lg"
-            onClick={() => setOnEdit(true)}
-          >
+          <button className="bg-blue" onClick={() => setOnEdit(true)}>
             Edit
           </button>
         )}
 
-        <button className="text-xs p-1 rounded-lg" onClick={handleDelete}>
+        <button className=" bg-red" onClick={handleDelete}>
           Delete
         </button>
       </div>

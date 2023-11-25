@@ -1,3 +1,5 @@
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { NoteCard } from "@/components/NoteCard";
 import { NoteInput } from "@/components/NoteInput";
 
@@ -15,14 +17,15 @@ export default async function Page() {
   const { items } = await getNotes();
 
   return (
-    <div>
-      <h1>Notes :</h1>
+    <div className="bg-white">
+      <Header />
+      <NoteInput />
       <div>
         {items.map(({ id, content }) => {
           return <NoteCard key={id} id={id} content={content} />;
         })}
       </div>
-      <NoteInput />
+      <Footer />
     </div>
   );
 }

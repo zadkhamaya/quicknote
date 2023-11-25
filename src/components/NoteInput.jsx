@@ -28,9 +28,21 @@ export const NoteInput = () => {
 
   return (
     <div>
-      <h3>Input</h3>
-      <input onChange={(e) => setNote(e.target.value)} />
-      <button onClick={createNote}>Save Note</button>
+      <div className="flex p-3 ml-3 mr-3 space-x-2 justify-between">
+        <input
+          placeholder="Write Here..."
+          className="bg-grey text-sm focus:outline-none rounded-xl p-3 w-full"
+          onChange={(e) => setNote(e.target.value)}
+        />
+
+        <button
+          className="text-xs bg-blue p-3 rounded-xl text-white font-medium w-1/4"
+          onClick={createNote}
+        >
+          Save
+        </button>
+      </div>
+      <hr className="ml-6 mr-6 mt-3" />
     </div>
   );
 };
