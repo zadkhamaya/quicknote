@@ -17,7 +17,7 @@ export default async function Page() {
   const { items } = await getNotes();
 
   return (
-    <div className="bg-white">
+    <div className="bg-white rounded-xl h-full">
       <Header />
       <NoteInput />
       <div>

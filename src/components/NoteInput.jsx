@@ -28,7 +28,7 @@ export const NoteInput = () => {
 
   return (
     <div>
-      <div className="flex p-3 ml-3 mr-3 space-x-2 justify-between">
+      <div className="flex p-3 ml-3 mr-3 space-x-2  md:items-center">
         <input
           placeholder="Write Here..."
           className="bg-grey text-sm focus:outline-none rounded-xl p-3 w-full"
